@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/top_app_bar_history_student"
+        android:layout_width="match_parent"
+        android:padding="16dp"
+        android:layout_height="64dp">
+        <TextView
+            android:id="@+id/title_history"
+            android:layout_centerInParent="true"
+            style="@style/WhiteTextWrap"
+            android:text="History"
+            android:textSize="24sp"
+            android:textColor="@color/seed_light"/>
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:id="@+id/filter_by_date"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@color/seed_light"
+            android:background="@drawable/ic_filter_outlined"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@id/top_app_bar_history_student"
+        android:visibility="gone"
+        android:id="@+id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/empty"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/top_app_bar_history_student"
+        android:id="@+id/has_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_history_students"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <ProgressBar
+            android:id="@+id/progress_history_students"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

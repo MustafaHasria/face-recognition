@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="16dp"
+    app:strokeWidth="0dp"
+    app:cardBackgroundColor="@color/colorPrimary"
+    app:cardElevation="2dp">
+    <RelativeLayout
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_student"
+            android:layout_width="60dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_height="60dp"/>
+        <LinearLayout
+            android:gravity="start|center"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/img_student"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/full_name_student"
+                style="@style/WhiteTextWrap"
+                android:textColor="@color/seed_light"
+                android:textSize="18sp"
+                />
+            <TextView
+                android:id="@+id/spec_student"
+                style="@style/WhiteTextWrap"
+                android:textAppearance="@style/RegularFont"
+                android:textColor="@color/seed_light"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

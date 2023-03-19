@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.TeacherHomeActivity">
+    <FrameLayout
+        android:id="@+id/frame_teacher_home"
+        android:layout_width="match_parent"
+        android:layout_above="@id/bnv_teacher_menu"
+        android:layout_height="match_parent"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="mini"
+        android:onClick="addStudent"
+        android:layout_margin="16dp"
+        app:rippleColor="@color/seed"
+        android:id="@+id/fab_add_student"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@id/bnv_teacher_menu"
+        android:src="@drawable/ic_add_outline"/>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bnv_teacher_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bnv_teacher_menu"/>
+</RelativeLayout>

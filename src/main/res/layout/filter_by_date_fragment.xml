@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:background="@drawable/top_radius_white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/cancel_filter"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/ic_cancel"
+            android:backgroundTint="@color/seed_light" />
+
+        <TextView
+            android:id="@+id/text_add_student"
+            style="@style/WhiteTextWrap"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:text="Sort By Date"
+            android:textColor="@color/seed_light"
+            android:textSize="24sp" />
+
+        <View
+            android:id="@+id/separator"
+            android:layout_below="@id/text_add_student"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/seed_light"
+            android:layout_gravity="center"/>
+        <LinearLayout
+            android:layout_below="@id/separator"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="From"
+                android:textColor="@color/seed_light"
+                android:textSize="24sp"
+                android:textAppearance="@style/BoldFont"/>
+
+            <DatePicker
+                android:id="@+id/calendar_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:startYear="2023" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="To"
+                android:textColor="@color/seed_light"
+                android:textSize="24sp"
+                android:textAppearance="@style/BoldFont"/>
+            <DatePicker
+                android:id="@+id/to_calendar_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:startYear="2023" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mb_confirm_filter"
+                style="@style/WhiteBtn"
+                app:backgroundTint="@color/seed"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:text="Filter Now"
+                android:textSize="24sp"
+                android:textAppearance="@style/BoldFont"
+                android:textColor="@color/colorPrimary"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>

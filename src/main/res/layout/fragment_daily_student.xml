@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/top_app_bar_daily_student"
+        android:layout_width="match_parent"
+        android:padding="16dp"
+        android:layout_height="64dp">
+        <TextView
+            android:id="@+id/title_daily"
+            android:layout_centerInParent="true"
+            style="@style/WhiteTextWrap"
+            android:text="For Today 1-28-2023"
+            android:textSize="24sp"
+            android:textColor="@color/seed_light"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@id/top_app_bar_daily_student"
+        android:visibility="gone"
+        android:id="@+id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/empty"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/top_app_bar_daily_student"
+        android:id="@+id/has_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_daily_students"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <ProgressBar
+            android:id="@+id/progress_daily_students"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

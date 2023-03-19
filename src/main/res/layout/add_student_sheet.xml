@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/parent_student_sheet"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:background="@drawable/top_radius_white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/cancel_add_student"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/ic_cancel"
+            android:backgroundTint="@color/seed_light"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentEnd="true"/>
+
+        <TextView
+            android:id="@+id/text_add_student"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            style="@style/WhiteTextWrap"
+            android:textSize="24sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:text="Add Student"
+            android:textColor="@color/seed_light"/>
+
+        <View
+            android:id="@+id/separator"
+            android:layout_below="@id/text_add_student"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/seed_light"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/separator"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/img_add_profile_photo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_profile_image"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:src="@drawable/profile" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/radius"
+                    android:backgroundTint="@color/seed"
+                    android:gravity="center"
+                    android:padding="4dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/edit"
+                        android:tint="@color/colorPrimary" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_first_name"
+                style="@style/TextInputAddStudent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="First Name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_last_name"
+                style="@style/TextInputAddStudent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Last Name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_email"
+                style="@style/TextInputAddStudent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_resid"
+                style="@style/TextInputAddStudent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_resid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Residence"
+                    android:imeOptions="actionNext"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_spec"
+                style="@style/TextInputAddStudent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_spec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Speciality"
+                    android:imeOptions="actionNext"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_phone_number"
+                style="@style/TextInputAddStudent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Student Phone Number"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_phone_number_guardian"
+                style="@style/TextInputAddStudent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_phone_number_guardian"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Guardian Phone Number"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                style="@style/WhiteTextWrap"
+                android:layout_marginStart="32dp"
+                android:text="Birth Day"
+                android:textColor="@color/seed_light" />
+
+            <DatePicker
+                android:id="@+id/picker_birth_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:startYear="1990" />
+
+            <TextView
+                style="@style/WhiteTextWrap"
+                android:layout_marginStart="32dp"
+                android:text="Joined Date"
+                android:textColor="@color/seed_light" />
+
+            <DatePicker
+                android:id="@+id/picker_joined_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:endYear="2023" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mb_add_student"
+                style="@style/WhiteBtn"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:text="Add Student"
+                android:textColor="@color/colorPrimary"
+                app:backgroundTint="@color/seed" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>
